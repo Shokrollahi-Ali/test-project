@@ -1,12 +1,30 @@
+import createCache from '@emotion/cache';
+import { CacheProvider } from '@emotion/react';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import rtlPlugin from 'stylis-plugin-rtl';
 import App from './App';
+import './index.css';
 import reportWebVitals from './reportWebVitals';
+
+const theme = createTheme({
+  direction: 'rtl',
+});
+
+// Create rtl cache
+const cacheRtl = createCache({
+  key: 'muirtl',
+  stylisPlugins: [rtlPlugin],
+});
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <CacheProvider value={cacheRtl}>
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
+    </CacheProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
