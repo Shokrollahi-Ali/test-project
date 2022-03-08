@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "SansFont";
+  src: url("../fonts/eot/SansFont.eot");
+  src: url("../fonts/woff2/SansFont.woff2") format("woff2"),
+    url("../fonts/woff/SansFont.woff") format("woff"),
+    url("../fonts/ttf/SansFont.ttf") format("truetype");
+}
+@font-face {
+  font-family: "SansFont";
+  src: url("../fonts/eot/SansFont_Bold.eot");
+  src: url("../fonts/woff2/SansFont_Bold.woff2") format("woff2"),
+    url("../fonts/woff/SansFont_Bold.woff") format("woff"),
+    url("../fonts/ttf/SansFont_Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "SansFont";
+  src: url("../fonts/eot/SansFont_Light.eot");
+  src: url("../fonts/woff2/SansFont_Light.woff2") format("woff2"),
+    url("../fonts/woff/SansFont_Light.woff") format("woff"),
+    url("../fonts/ttf/SansFont_Light.ttf") format("truetype");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "SansFont";
+  src: url("../fonts/eot/SansFont_Black.eot");
+  src: url("../fonts/woff2/SansFont_Black.woff2") format("woff2"),
+    url("../fonts/woff/SansFont_Black.woff") format("woff"),
+    url("../fonts/ttf/SansFont_Black.ttf") format("truetype");
+  font-weight: 900;
+}

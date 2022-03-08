@@ -7,6 +7,7 @@ import rtlPlugin from 'stylis-plugin-rtl';
 import App from './App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import './assets/sass/main.css';
 
 const theme = createTheme({
   direction: 'rtl',
