@@ -4,6 +4,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { AutoCompleteProps } from './dataModel';
 
 const MuAutoComplete: React.FC<AutoCompleteProps> = ({
+  id,
   value,
   label,
   error,
@@ -18,7 +19,7 @@ const MuAutoComplete: React.FC<AutoCompleteProps> = ({
       clearIcon={false}
       disablePortal
       popupIcon={<KeyboardArrowDownIcon fontSize='large' />}
-      id='combo-box-demo'
+      id={id}
       options={options}
       onChange={onChange}
       renderInput={(params) => (

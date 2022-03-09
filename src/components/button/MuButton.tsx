@@ -8,7 +8,12 @@ const MuButton: React.FC<ButtonProps> = ({
   children,
 }) => {
   return (
-    <Button className={className} onClick={onClick} fullWidth>
+    <Button
+      className={className}
+      onClick={onClick}
+      disabled={disabled}
+      fullWidth
+    >
       {children}
     </Button>
   );

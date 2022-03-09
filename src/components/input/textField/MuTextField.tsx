@@ -3,6 +3,7 @@ import { TextFieldProps } from './dataModel';
 
 const MuTextField: React.FC<TextFieldProps> = ({
   value,
+  type,
   label,
   defaultValue,
   helperText,
@@ -17,7 +18,7 @@ const MuTextField: React.FC<TextFieldProps> = ({
     <TextField
       error={error}
       fullWidth
-      type='email'
+      type={type}
       value={value}
       label={label}
       defaultValue={defaultValue}

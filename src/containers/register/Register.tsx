@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import MuProgressButton from '../../components/button/MuProgressButton';
 import MuAutoComplete from '../../components/input/autoComplete/MuAutoComplete';
 import MuTextField from '../../components/input/textField/MuTextField';
@@ -32,13 +32,7 @@ const Register = () => {
 
   const [selectedProvince, setSelectedProvince] = useState();
 
-  const cityChangeHandler = (e: any, value: any) => {
-    setSelectedCity(value);
-  };
-
-  const provinceChangeHandler = (e: any, value: any) => {
-    setSelectedProvince(value);
-  };
+  const [isButtonEnable, setIsButtonDisabled] = useState(true);
 
   const progress = [
     isEmailTouched && isEmailFormatValid,
@@ -47,7 +41,22 @@ const Register = () => {
     selectedProvince,
   ].filter((item) => item).length;
 
-  const submitButtonClick = () => {};
+  useEffect(() => {
+    if (progress === 0) return;
+    setIsButtonDisabled(progress === 4);
+  }, [progress]);
+
+  const cityChangeHandler = (e: any, value: any) => {
+    setSelectedCity(value);
+  };
+
+  const provinceChangeHandler = (e: any, value: any) => {
+    setSelectedProvince(value);
+  };
+
+  const submitButtonClick = () => {
+    setIsButtonDisabled(progress === 4);
+  };
   return (
     <div className='register'>
       <MuTypography className='primary-text'>
@@ -63,14 +72,17 @@ const Register = () => {
         onBlur={emailBlurHandler}
         error={!isEmailFormatValid || !isLettersValid}
         helperText={emailHelperText}
+        type='email'
       />
       <MuAutoComplete
+        id='city'
         label={registerTranslation.selectCity}
         options={mockData.cityOptions}
         value={selectedCity}
         onChange={cityChangeHandler}
       />
       <MuAutoComplete
+        id='province'
         label={registerTranslation.selectProvince}
         options={mockData.provinceOptions}
         value={selectedProvince}
@@ -90,6 +102,7 @@ const Register = () => {
       />
       <MuProgressButton
         progress={progress}
+        disabled={!isButtonEnable}
         submitButtonClick={submitButtonClick}
       />
     </div>

@@ -6,5 +6,6 @@ export interface ButtonProps {
 
 export interface ProgressButtonProps {
   progress: number;
+  disabled?: boolean;
   submitButtonClick: () => void;
 }

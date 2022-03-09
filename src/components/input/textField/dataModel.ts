@@ -1,5 +1,6 @@
 export interface TextFieldProps {
   value?: string;
+  type?: string;
   label?: string;
   defaultValue?: string;
   helperText?: string;

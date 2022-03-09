@@ -1,9 +1,12 @@
-import MuButton from './MuButton';
 import submit from '../../assets/images/submit.svg';
+import { commonTranslation } from '../../resources/translations';
+import MuTypography from '../typography/MuTypography';
 import { ProgressButtonProps } from './dataModel';
+import MuButton from './MuButton';
 
 const MuProgressButton: React.FC<ProgressButtonProps> = ({
   progress,
+  disabled,
   submitButtonClick,
 }) => {
   return (
@@ -15,12 +18,17 @@ const MuProgressButton: React.FC<ProgressButtonProps> = ({
       <div className='button-wrapper'>
         <MuButton
           className='button'
-          // disabled={isButtonDisable}
+          disabled={disabled}
           onClick={submitButtonClick}
         >
           <img src={submit} alt='submit' />
         </MuButton>
       </div>
+      {disabled && (
+        <MuTypography className='helper-text'>
+          {commonTranslation.allFieldsMustBeFilled}
+        </MuTypography>
+      )}
     </div>
   );
 };

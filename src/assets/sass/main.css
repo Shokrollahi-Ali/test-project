@@ -96,6 +96,16 @@ p {
   border-left: 4px solid #4cb59f;
   border-bottom-left-radius: 20px; }
 
+.register_button .helper-text {
+  position: absolute;
+  bottom: -2.3rem;
+  right: 1.6rem;
+  color: #d32f2f;
+  font-size: 1.2rem; }
+
+.button.MuiButton-root.Mui-disabled.Mui-disabled {
+  background-color: #b4b4b4; }
+
 .text-field .MuiInputLabel-root,
 .text-field .MuiOutlinedInput-root {
   font-family: inherit;
@@ -123,6 +133,7 @@ p {
 .register {
   min-height: 100vh;
   padding: 2rem;
+  margin-bottom: 2rem;
   background-image: url("../images/register.svg");
   background-repeat: no-repeat;
   background-size: cover; }
@@ -134,7 +145,7 @@ p {
 
 .register .secondary-text {
   font-size: 1.6rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 2rem;
   color: #404040; }
 
 .register > div:not(:last-child) {

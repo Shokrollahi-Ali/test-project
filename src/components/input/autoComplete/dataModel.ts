@@ -1,4 +1,5 @@
 export interface AutoCompleteProps {
+  id: string;
   value?: { label: string; id: number };
   label?: string;
   className?: string;
