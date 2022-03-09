@@ -11,6 +11,9 @@ import './assets/sass/main.css';
 
 const theme = createTheme({
   direction: 'rtl',
+  typography: {
+    fontFamily: 'SansFont',
+  },
 });
 
 // Create rtl cache
