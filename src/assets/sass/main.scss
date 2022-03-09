@@ -5,7 +5,11 @@
 
 // base
 @import 'base/base';
-@import 'base/utilities';
 
 //components
 @import 'components/button/button';
+@import 'components/text-field/text-field';
+@import 'components/auto-complete/auto-complete';
+
+//containers
+@import 'containers/register';

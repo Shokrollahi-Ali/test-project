@@ -1,0 +1,15 @@
+.text-field {
+  .MuiInputLabel-root,
+  .MuiOutlinedInput-root {
+    font-family: inherit;
+    font-size: $font-size-normal;
+    color: $color-dark-secondary;
+  }
+  fieldset {
+    border: 0.5px solid $color-gray-primary;
+    border-radius: 16px;
+  }
+  .MuiFormHelperText-root {
+    font-size: $font-size-small;
+  }
+}

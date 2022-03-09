@@ -27,21 +27,15 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  font-family: "SansFont", Arial, sans-serif; }
+  font-family: 'SansFont', Arial, sans-serif; }
 
 html {
   font-size: 62.5%; }
-  @media (max-width: 767.98px) {
-    html {
-      font-size: 50%; } }
-  @media (max-width: 575.98px) {
-    html {
-      font-size: 43%; } }
 
 body {
-  font-family: "SansFont", Arial, sans-serif;
+  font-family: 'SansFont', Arial, sans-serif;
   font-weight: normal;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   direction: rtl;
   box-sizing: border-box;
   overflow-x: hidden; }
@@ -52,83 +46,103 @@ h3,
 p {
   margin-bottom: 0; }
 
-.font-size-small {
-  font-size: 1.2rem; }
-
-.font-size-normal {
-  font-size: 1.4rem; }
-
-.font-size-large {
+.MuiInputBase-root.MuiOutlinedInput-root {
+  font-family: inherit;
   font-size: 1.6rem; }
 
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+.register_button {
+  position: relative;
+  height: 56px; }
 
-.Mu_loading {
-  position: fixed;
-  background-color: rgba(146, 140, 140, 0.5);
+.register_button .button-wrapper {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  padding: 4px;
+  border: 4px solid #e0e0e0;
+  border-radius: 20px; }
+
+.register_button .square {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  z-index: 1; }
+
+.register_button .top-right {
+  top: 0;
+  right: 0;
+  border-top: 4px solid #4cb59f;
+  border-right: 4px solid #4cb59f;
+  border-top-right-radius: 20px; }
+
+.register_button .top-left {
   top: 0;
   left: 0;
-  z-index: 100;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
+  border-top: 4px solid #4cb59f;
+  border-left: 4px solid #4cb59f;
+  border-top-left-radius: 20px; }
 
-.layout {
-  position: relative;
-  min-height: 100vh; }
-  .layout_footer {
-    position: absolute;
-    bottom: 0; }
+.register_button .bottom-right {
+  bottom: 0;
+  right: 0;
+  border-bottom: 4px solid #4cb59f;
+  border-right: 4px solid #4cb59f;
+  border-bottom-right-radius: 20px; }
 
-.header {
-  display: flex;
-  align-items: center;
-  height: 5rem;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  padding: 2rem 2.5rem;
-  background-image: linear-gradient(to left, #45ec74, white); }
-  .header_nav ul {
-    list-style: none; }
-  .header_nav li:not(:last-child) {
-    margin-left: 1rem; }
-  .header_nav a {
-    text-decoration: none;
-    color: black; }
-  .header .active {
-    color: #d32e2e; }
+.register_button .bottom-left {
+  bottom: 0;
+  left: 0;
+  border-bottom: 4px solid #4cb59f;
+  border-left: 4px solid #4cb59f;
+  border-bottom-left-radius: 20px; }
 
-.todo {
-  background-image: linear-gradient(to left, #928c8c, white); }
-  .todo_add-btn {
-    display: inline-block;
-    text-decoration: none;
-    color: black;
-    background-color: rgba(146, 140, 140, 0.5);
-    padding: 1rem 2rem;
-    border-radius: 1rem;
-    margin-bottom: 1rem; }
-  .todo_item {
-    display: flex;
-    align-items: center;
-    padding: 1rem; }
-  .todo_item:not(:last-child) {
-    margin-bottom: 3rem; }
-  .todo_edit {
-    display: flex;
-    padding: 1rem; }
-  .todo_edit:hover {
-    background-color: rgba(146, 140, 140, 0.1);
-    border-radius: 50%; }
-  .todo_edit, .todo_edit:hover {
-    color: rgba(0, 0, 0, 0.54); }
+.text-field .MuiInputLabel-root,
+.text-field .MuiOutlinedInput-root {
+  font-family: inherit;
+  font-size: 1.6rem;
+  color: #616161; }
 
-.notification {
-  background-color: #d32e2e;
-  padding: 1rem; }
+.text-field fieldset {
+  border: 0.5px solid #b4b4b4;
+  border-radius: 16px; }
+
+.text-field .MuiFormHelperText-root {
+  font-size: 1.2rem; }
+
+.auto-complete label {
+  font-family: inherit;
+  font-size: 1.6rem; }
+
+.auto-complete fieldset {
+  border: 0.5px solid #b4b4b4;
+  border-radius: 16px; }
+
+.auto-complete .MuiOutlinedInput-root {
+  color: #616161; }
+
+.register {
+  min-height: 100vh;
+  padding: 2rem;
+  background-image: url("../images/register.svg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.register .primary-text {
+  font-size: 2rem;
+  padding-top: 65%;
+  color: #404040; }
+
+.register .secondary-text {
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  color: #404040; }
+
+.register > div:not(:last-child) {
+  margin-bottom: 1.6rem; }
+
+.register .button.MuiButton-root,
+.register .button.MuiButton-root:hover {
+  background-color: #80e8d0;
+  border-radius: 13px;
+  height: 40px;
+  z-index: 2; }

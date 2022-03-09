@@ -1,0 +1,3 @@
+@mixin progressBorder($property) {
+  #{$property}: $button-progress-border;
+} ;

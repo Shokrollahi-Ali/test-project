@@ -1,1 +1,48 @@
+.register_button {
+  position: relative;
 
+  height: 56px;
+
+  .button-wrapper {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    padding: 4px;
+    border: 4px solid $color-gray-secondary;
+    border-radius: 20px;
+  }
+  .square {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    z-index: 1;
+  }
+  .top-right {
+    top: 0;
+    right: 0;
+    @include progressBorder(border-top);
+    @include progressBorder(border-right);
+    border-top-right-radius: $button-progress-radius;
+  }
+  .top-left {
+    top: 0;
+    left: 0;
+    @include progressBorder(border-top);
+    @include progressBorder(border-left);
+    border-top-left-radius: $button-progress-radius;
+  }
+  .bottom-right {
+    bottom: 0;
+    right: 0;
+    @include progressBorder(border-bottom);
+    @include progressBorder(border-right);
+    border-bottom-right-radius: $button-progress-radius;
+  }
+  .bottom-left {
+    bottom: 0;
+    left: 0;
+    @include progressBorder(border-bottom);
+    @include progressBorder(border-left);
+    border-bottom-left-radius: $button-progress-radius;
+  }
+}
