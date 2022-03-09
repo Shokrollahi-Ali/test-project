@@ -1,7 +1,12 @@
-import './App.css';
+import Container from '@mui/material/Container';
+import Register from './containers/register/Register';
 
 function App() {
-  return <div dir='rtl'>تنظیمات راست چین کردن وب سایت</div>;
+  return (
+    <Container maxWidth='xs' disableGutters={true}>
+      <Register />
+    </Container>
+  );
 }
 
 export default App;

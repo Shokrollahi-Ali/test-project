@@ -1,0 +1,27 @@
+.register {
+  min-height: 100vh;
+  padding: 2rem;
+  background-image: url('../images/register.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  .primary-text {
+    font-size: 2rem;
+    padding-top: 65%;
+    color: $color-dark-primary;
+  }
+  .secondary-text {
+    font-size: $font-size-normal;
+    margin-bottom: 1.2rem;
+    color: $color-dark-primary;
+  }
+  > div:not(:last-child) {
+    margin-bottom: 1.6rem;
+  }
+  .button.MuiButton-root,
+  .button.MuiButton-root:hover {
+    background-color: $color-green-primary;
+    border-radius: 13px;
+    height: 40px;
+    z-index: 2;
+  }
+}
